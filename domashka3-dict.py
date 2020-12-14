@@ -1,11 +1,11 @@
-dict1 = {'Зима': [12, 1, 2], 'Весна': [3, 4, 5], 'Лето': [6, 7, 8], 'Осень': [9, 10, 11]}
-month = int(input("введите номер месяца от 1 до 12: "))
-if month in dict1.get("Зима"):
-    print("Зима")
-elif month in dict1.get('Весна'):
-    print("Весна")
-elif month in dict1.get('Лето'):
-    print("Лето")
-elif month in dict1.get('Осень'):
-    print("Осень")
+dict1 = {'Р—РёРјР°': [12, 1, 2], 'Р’РµСЃРЅР°': [3, 4, 5], 'Р›РµС‚Рѕ': [6, 7, 8], 'РћСЃРµРЅСЊ': [9, 10, 11]}
+month = int(input("Р’РІРµРґРёС‚Рµ РЅРѕРјРµСЂ РјРµСЃСЏС†Р° РѕС‚ 1 РґРѕ 12: "))
+if month in dict1.get("Р—РёРјР°"):
+    print("Р—РёРјР°")
+elif month in dict1.get('Р’РµСЃРЅР°'):
+    print("Р’РµСЃРЅР°")
+elif month in dict1.get('Р›РµС‚Рѕ'):
+    print("Р›РµС‚Рѕ")
+elif month in dict1.get('РћСЃРµРЅСЊ'):
+    print("РћСЃРµРЅСЊ")
     
