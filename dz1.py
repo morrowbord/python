@@ -1,5 +1,0 @@
-stroka = input('введите строку: ')
-string1 = int(input("Введите число: "))
-string2 = input("Введите строку2: ")
-string3 = int(input("Введите число: "))
-print(stroka, string1, string2, string3)
