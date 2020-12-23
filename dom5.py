@@ -6,9 +6,8 @@ def my_func(x, y):
     return x * y
 
 
-list1 = [randint(100, 1000) for i in range(10)]
+list1 = [i for i in range(100, 1001*2) if (i) % 2 == 0]
 sum_all = reduce(my_func, list1)
 
-print(list1)
-print(f"сумма чисел последовательности: {sum_all}")
-
+print(f"последовательность:\n{list1}\n")
+print(f"умножение чисел последовательности:\n{sum_all}\n")
