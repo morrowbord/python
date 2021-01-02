@@ -3,7 +3,7 @@ import time
 
 class TrafficLight:
     # атрибуты класса
-    __color = ["Красный", "Желтый", "Зеленый"]
+    __color = ["Красный", "Желтый", "Зеленый", "Желтый"]
     # методы класса
 
     def running(self):
@@ -13,7 +13,6 @@ class TrafficLight:
                 if i == "Красный":
                     time.sleep(7)
                 time.sleep(2)
-                print("_-_-_-_")
 
 
 tl = TrafficLight() #создание экземпляра
