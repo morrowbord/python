@@ -5,30 +5,45 @@ class Car:
     direction = bool
 
     def __init__(self, color, name, is_police=False):
-        self.is_police = is_police
-        self.speed = int(input(f"Введите скорость автомобиля: "))
+        try:
+            self.speed = int(input(f"Введите скорость автомобиля: "))
+        except TypeError or ValueError or AttributeError:
+            print("Введите скорость заного!")
+            self.speed = 0
+
         self.color = color
         self.name = name
+        self.is_police = is_police
 
     def go(self):
         """машина поехала!"""
-        print(f"машина {self.color} {self.name} поехала! ")
+        if self.speed == 0:
+            print("машина не едет!")
+
+        else:
+            print(f"машина {self.color} {self.name} поехала! ")
 
     def turn(self):
         """машина повернула!"""
-        self.direction = randint(0, 1)
-        # print(self.direction)
-        if self.direction:
-            print(f"машина {self.color} {self.name} повернула на право")
+        if self.speed == 0:
+            pass
         else:
-            print(f"машина {self.color} {self.name} повернула на лево")
+            self.direction = randint(0, 1)
+
+            if self.direction:
+                print(f"машина {self.color} {self.name} повернула на право")
+            else:
+                print(f"машина {self.color} {self.name} повернула на лево")
 
     def stop(self):
         """Машина остановилась!"""
-        print(f"Машина {self.color} {self.name} остановилась!")
+        if self.speed == 0:
+            pass
+        else:
+            print(f"машина {self.color} {self.name} остановилась!")
 
     def show_speed(self):
-        print(f"Скорость авто:{self.speed} ")
+        print(f"Скорость авто: {self.speed}км/ч ")
         """показывать текущую скорость автомобиля"""
 
 
@@ -41,9 +56,9 @@ class TownCar(Car):
 
     def show_speed(self):
         if self.speed > 40:
-            print(f"Скорость TownCar превышена! Снизьте до 40км/ч")
+            print(f"Скорость TownCar превышена на {self.speed - 40}км/ч! Снизьте до 40км/ч")
         else:
-            print(f"Скорость {self.name}: {self.speed} ")
+            print(f"Скорость {self.name}: {self.speed}км/ч ")
 
 
 class WorkCar(Car):
@@ -55,9 +70,9 @@ class WorkCar(Car):
 
     def show_speed(self):
         if self.speed > 60:
-            print(f"Скорость WorkCar превышена! Снизьте до 60км/ч")
+            print(f"Скорость WorkCar превышена на {self.speed - 60}км/ч!! Снизьте до 60км/ч")
         else:
-            print(f"Скорость: {self.speed} ")
+            print(f"Скорость: {self.speed}км/ч! ")
 
 
 class SportCar(Car):
