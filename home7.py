@@ -6,17 +6,15 @@ with open("text777.json", "w", encoding="utf-8") as write_file:
         final_result = {}
         i = 0
         for content in t3_file:
-            profit = int(content.split()[2])-int(content.split()[3])
+            profit = int(content.split()[2]) - int(content.split()[3])
             if profit > 0:
                 everage_profit = everage_profit + profit
                 i += 1
-                ev = (everage_profit) / i
-                ev = str(ev)
+                ev = everage_profit / i
 
             result = {content.split()[0]: profit}
-            final_result = {**final_result,**result}
-
-            # result = тут надо взять значения словаря и сделать один
+            final_result = {**final_result, **result}
+            ev = {"среднее значение": ev}
             print(result)
-        final_result = [final_result,ev]
+        final_result = [final_result, ev]
         json.dump(final_result, write_file, ensure_ascii=False, indent=4)
