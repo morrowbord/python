@@ -3,8 +3,8 @@ class ZeroEx(Exception):
     def __init__(self,txt):
         self.txt = txt
 
-x = input("")
-data = input("введите число, кроме 0: ")
+x = input("введите число: ")
+data = input("введите делитель, кроме 0: ")
 
 try:
     data = int(data)
