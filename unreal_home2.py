@@ -49,4 +49,4 @@ rashod_tkani_suit = Suit(float(input("Введите рост костюма: ")
 # print(rashod_tkani_suit.h)
 
 rashod = rashod_tkani_coat.consumpion() + rashod_tkani_suit.consumpion()
-print(f"суммарный расход ткани: {rashod:1f}")
+print(f"суммарный расход ткани: {rashod:.1f}")
